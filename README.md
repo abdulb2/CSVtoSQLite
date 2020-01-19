@@ -17,3 +17,14 @@ Small Java program to parse CSV file and enter records into an SQLite database
 * Specificy CSV file to consume as first command line argument
 * Example run command: `java -cp "../libs/*:." CSVtoSQLite example.csv` (MacOS)
 * Output .csv, .db, and .log will be created one directory above src folder.
+
+### Approach, Design, and Assumptions
+Prior to writing this program, I had no experience with csv files or SQLite. After reading and learning about the two subjects (in relation to Java), I opted to use Appache Commons CSV to read and write csv files due to its simplicity and efficiency. For the SQLite database, i opted to use Java's SQLite JDBC driver due to its simplicity. I chose to create a new table within the Java program itself, rather than something like the CLI tool that comes with SQLite, to minimize on the amount of software required to utilize this application. 
+
+Assumptions made include:
+* The database being created/connected does not already contain a table named "GOOD_RECORDS"
+* The user will only attempt to parse CSV files with an appropriate header, containing 10 columns
+
+### Notes
+* Although this program is used specifically to parse csv files with 10 columns and a header, minumum changes would need to be made to increase/decrease the total number of columns and the presense/lack of a header
+* This program was writen, compiled, and tested using Java 8
