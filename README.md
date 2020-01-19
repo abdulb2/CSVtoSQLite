@@ -9,17 +9,17 @@ Small Java program to parse CSV file and enter records into an SQLite database
 * Log file created at then end of the program, tracking number of total records, complete records, and incomplete records processed
 
 ### How To Use
-* Copy src and lib folder into a directory
-* Naviage to src folder
-* Compile on command line, specificying classpath to libs folder containg necessary JAR files
+* Copy src and lib folders into a directory
+* Navigate to src folder
+* Compile on command line, specifying classpath to libs folder containing necessary JAR files
 * Example compile command: `javac -cp "../libs/*:." *.java` (MacOS)
-* Run program on command line, specificying classpath to libs folder containg necessary JAR files
-* Specificy CSV file to consume as first command line argument
+* Run program on command line, specifying classpath to libs folder containing necessary JAR files
+* Specify CSV file to consume as first command line argument
 * Example run command: `java -cp "../libs/*:." CSVtoSQLite example.csv` (MacOS)
-* Output .csv, .db, and .log will be created one directory above src folder.
+* Output .csv, .db, and .log files will be created one directory above src folder.
 
 ### Approach, Design, and Assumptions
-Prior to writing this program, I had no experience with csv files or SQLite. After reading and learning about the two subjects (in relation to Java), I opted to use Appache Commons CSV to read and write csv files due to its simplicity and efficiency. For the SQLite database, i opted to use Java's SQLite JDBC driver due to its simplicity. I chose to create a new table within the Java program itself, rather than something like the CLI tool that comes with SQLite, to minimize on the amount of software required to utilize this application. 
+Prior to writing this program, I had no experience with csv files or SQLite. After reading and learning about the two subjects (in relation to Java), I opted to use Appache Commons CSV to read and write csv files due to its simplicity and efficiency. For the SQLite database, I opted to use Java's SQLite JDBC driver due to its simplicity. I chose to create a new table within the Java program itself, rather than using something like the CLI tool that comes with SQLite, to minimize the amount of software required to utilize this application. 
 
 Assumptions made include:
 * The database being created/connected does not already contain a table named "GOOD_RECORDS"
