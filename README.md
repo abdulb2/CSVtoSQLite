@@ -26,5 +26,5 @@ Assumptions made include:
 * The user will only attempt to parse CSV files with an appropriate header, containing 10 columns
 
 ### Notes
-* Although this program is used specifically to parse csv files with 10 columns and a header, minumum changes would need to be made to increase/decrease the total number of columns and the presense/lack of a header
+* Although this program is used specifically to parse csv files with 10 columns and a header, minumum changes would need to be made to increase/decrease the total number of columns and the presence/lack of a header
 * This program was writen, compiled, and tested using Java 8
